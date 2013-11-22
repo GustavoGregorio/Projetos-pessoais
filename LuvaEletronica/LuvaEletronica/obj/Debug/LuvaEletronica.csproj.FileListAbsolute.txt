@@ -1,0 +1,9 @@
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\bin\Debug\LuvaEletronica.exe.config
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\bin\Debug\LuvaEletronica.exe
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\bin\Debug\LuvaEletronica.pdb
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.csprojResolveAssemblyReference.cache
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.Form1.resources
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.Properties.Resources.resources
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.csproj.GenerateResource.Cache
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.exe
+c:\users\gregster\documents\visual studio 2012\Projects\LuvaEletronica\LuvaEletronica\obj\Debug\LuvaEletronica.pdb
