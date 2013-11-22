@@ -1,0 +1,10 @@
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\bin\Debug\Bateria_virtual.exe.config
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.csprojResolveAssemblyReference.cache
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.Form1.resources
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.Properties.Resources.resources
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.csproj.GenerateResource.Cache
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\bin\Debug\Bateria_virtual.exe
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\bin\Debug\Bateria_virtual.pdb
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.exe
+c:\users\gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\obj\Debug\Bateria_virtual.pdb
+C:\Users\Gregster\documents\visual studio 2012\Projects\Bateria_virtual\Bateria_virtual\bin\Debug\irrKlang.NET4.dll
