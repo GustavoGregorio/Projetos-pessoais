@@ -27,7 +27,12 @@ namespace LuvaEletronica
         public const uint SOLTAR_TECLADO = 0x0002;
         public const uint PRESSIONAR_TECLADO = 0x0001;
         public string linha;
-        public int[] flag = {0, 0, 0, 0, 0, 0, 0, 0};
+        public int[] flag = { 0, 0, 0, 0, 0, 0, 0, 0 };
+        public int verificador = 0;
+        public string resol;
+        public string resol2;
+        public int posX;
+        public int posY;
 
 
         public Form1()
@@ -35,6 +40,13 @@ namespace LuvaEletronica
             InitializeComponent();
             serialPort1.DataReceived += serialPort1_DataReceived;
             FormClosing += new FormClosingEventHandler(Form_Fechar);
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height;
+            resol = Convert.ToString(w);
+            resol2 = Convert.ToString(h);
+            textBox1.Text = resol + 'x' + resol2;
+            posX = w / 2;
+            posY = h / 2;
         }
 
         private delegate void LineReceivedEvent(string line);
@@ -49,7 +61,16 @@ namespace LuvaEletronica
 
         private void LineReceived(string line)
         {
-            if (serialPort1.IsOpen)
+            for (int verif = 0; verif < 10; verif++)
+            {
+                if (line[verif] == '-')
+                {
+                    //System.Threading.Thread.Sleep(100);
+                    verificador = 1;
+                }
+            }
+
+            if (serialPort1.IsOpen && verificador == 0)
             {
                 int o = 100;
                 int m = 100;
@@ -58,18 +79,12 @@ namespace LuvaEletronica
                 #region
                 if (checkBox2.Checked)
                 {
-                    int x = 0;
-                    int y = 0;
-                    for (int cnt = 0; cnt < 5; cnt++)
-                    {
+                    Cursor.Position = new Point(posX, posY);   
                     string posicaoX = String.Concat(line[0], line[1], line[2], line[3]);
                     string posicaoY = String.Concat(line[4], line[5], line[6]);
-                        x = Math.Abs(int.Parse(posicaoX)) + x;
-                        y = Math.Abs(int.Parse(posicaoY)) + y;
-                    }
-                    x = x / 5;
-                    y = y / 5;
-                    Cursor.Position = new Point(x, y);
+                    posX = Math.Abs(int.Parse(posicaoX));
+                    posY = Math.Abs(int.Parse(posicaoY));
+                     
                 }
                 #endregion
 
@@ -210,8 +225,9 @@ namespace LuvaEletronica
                 #endregion
                  */
                 }
-                #endregion
+                #endregion              
             }
+            verificador = 0;
         }
 
         private void Form_Fechar(object sender, FormClosingEventArgs e)
@@ -244,6 +260,8 @@ namespace LuvaEletronica
                 try
                 {
                     serialPort1.Open();
+                    //serialPort1.Write("x" + resol);
+                    //serialPort1.Write("y" + resol2);
                     serialPort1.Write("a");
                 }
                 catch
@@ -255,7 +273,7 @@ namespace LuvaEletronica
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             if (serialPort1.IsOpen)
             {
                 try
@@ -265,7 +283,7 @@ namespace LuvaEletronica
                 }
                 catch
                 {
-                   MessageBox.Show("Ocorreu um erro. Por favor, certifique-se de que a porta correta foi selecionada, e se o dispositivo foi plugado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ocorreu um erro. Por favor, certifique-se de que a porta correta foi selecionada, e se o dispositivo foi plugado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
